@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>函数参数是按照值传递的</title>
+</head>
+<body>
+<script>
+    /*function sayHi(){
+        alert("hello" + arguments[0] + "," + arguments[1]);
+    }
+    sayHi("lyle","man");
+
+    function setName(obj){
+        obj.name = "nike";
+        obj = new Object();
+        obj.name = 'tigger';
+    }
+    var person = new Object();
+    setName(person);
+    alert(person.name);*/
+
+    var dog = new Object();
+    dog.name = "ali";
+    dog = new Object();
+    dog.name = "alasi";
+    alert(dog.name);
+
+    var pig = 2;
+    console.log(dog instanceof Object);
+    console.log(pig instanceof Object);
+
+</script>
+</body>
+</html>

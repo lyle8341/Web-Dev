@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>常用函数</title>
+</head>
+<body>
+<script>
+    console.log(parseInt("1234必须是数字开头才能parseInt"));
+
+    //第二个参数是基数（即多少进制）
+    console.log(parseInt("070",16));
+
+    var num = 10;
+    console.log(num.toString());
+
+    //输出二进制的toString
+    console.log(num.toString(2));//1010
+
+//    var qs = location.search.substring(1);
+//    console.log(qs);
+//    var hostName = location.hostname;
+//    console.log(hostName);
+//    var url = location.href;
+//    console.log(url);
+
+    //with不建议使用
+    //使用with
+    with(location){
+        var qs = search.substring(1);
+        console.log(qs);
+        var hostName = hostname;
+        console.log(hostName);
+        var url = href;
+        console.log(url);
+    }
+
+    var swi = "";
+
+    function numbers(i){
+         switch (i){
+            case 1: swi = "one";
+                break;
+            case 2: swi = "two";
+                break;
+            default: swi = "what";
+        }
+    }
+    numbers(10);
+    console.log(swi);
+
+</script>
+</body>
+</html>

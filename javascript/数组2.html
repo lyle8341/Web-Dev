@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    var num = [1,2,3,4,5,4,3,2,1];
+    //每个为true返回true
+    var eveRes = num.every(function (item,index,array) {
+        console.log(item);
+        console.log(index);
+        console.log(array);
+        return item>2;
+    });
+    //alert(eveRes);
+
+    //一项为true即为true
+    var someRes = num.some(function (item,index,array) {
+        return item>2;
+    });
+    //alert(someRes);
+
+
+    var filRes = num.filter(function (item,index,array) {
+        return item>2;
+    });
+    //alert(filRes);
+
+
+    var mapRes = num.map(function (item,index,array) {
+        return item*2;
+    });
+    //alert(mapRes);
+
+
+    var val = [1,2,3,4,5];
+    var reduRes = val.reduce(function(prev,cur,index,array){
+//        console.log(prev);
+//        console.log(cur);
+        return prev+cur;
+    });
+   // alert(reduRes);
+
+    var reduRightRes = val.reduceRight(function(prev,cur,index,array){
+        console.log(prev);
+        console.log(cur);
+        return prev+cur;
+    });
+    alert(reduRightRes);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

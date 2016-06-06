@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>script defer example</title>
+</head>
+<body>
+<!--局部变量-->
+<script>
+    function dog(){
+        var msg = "dog";
+    }
+    dog();
+    alert(msg);
+</script>
+
+<!--去掉var，就是全局变量-->
+<script>
+    function pig(){
+        pic = "rabbit";
+    }
+    pig();
+    alert(pic);
+</script>
+
+<!--严格模式下，对未声明的变量赋值，ReferenceError-->
+<script type="text/javascript">
+    function test(){
+        "use strict";
+        message = "hi";
+    }
+    test();
+    alert(message);
+</script>
+</body>
+</html>
