@@ -27,6 +27,7 @@
         //console.log(this);
         this.name = "Animal";
         this.showName = function(){
+            //console.log(this);
             alert(this.name);
         }
     }
@@ -42,7 +43,6 @@
 
     var animal = new Animal();//这样调用Animal,其中的this是Animal {}
     var cat = new Cat();
-    animal.showName();
     //被执行函数.call(a,b,c...);其中a是在被执行函数中this需要指定的对象，可以为null
     animal.showName.call(cat,",");
 </script>
