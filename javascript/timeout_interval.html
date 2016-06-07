@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+
+    //推荐传function
+    var timeoutId = setTimeout(function(){
+        alert("hello");
+    },3000);
+
+    /*取消超时*/
+    clearTimeout(timeoutId);
+
+
+    var  interValId =  setInterval(function () {
+        console.log("in");
+    },3000);
+
+    //取消间隔调用
+    //clearInterval(interValId);
+
+
+
+</script>
+</body>
+</html>
