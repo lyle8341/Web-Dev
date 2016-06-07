@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<script>
+<!--<script>
 
     function sum(num1,num2){
         return num1+num2;
@@ -14,11 +14,37 @@
 
     function callSum(num1,num2){
         console.log(this);
-        return sum.apply(this,arguments);
+        //被执行函数.call(a,b,c...);其中a是在被执行函数中this需要指定的对象，可以为null
+        return sum.apply(null,arguments);
+    }
+    //console.log(sum(1,2));
+    console.log(callSum(10,20));
+
+</script>-->
+
+<script>
+    function Animal(){
+        //console.log(this);
+        this.name = "Animal";
+        this.showName = function(){
+            alert(this.name);
+        }
     }
 
-    alert(callSum(10,20));
+    function Cat(){
+       // console.log(this);
+        this.name = "Cat";
+    }
 
+    //Animal();  这样调用Animal,其中的this是window
+    //Cat();     这样调用Cat，其中的this是window
+
+
+    var animal = new Animal();//这样调用Animal,其中的this是Animal {}
+    var cat = new Cat();
+    animal.showName();
+    //被执行函数.call(a,b,c...);其中a是在被执行函数中this需要指定的对象，可以为null
+    animal.showName.call(cat,",");
 </script>
 </body>
 </html>
