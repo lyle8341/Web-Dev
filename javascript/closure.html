@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*闭包就是能够读取其他函数内部变量的函数。*/
+    function f1() {
+        var n = 999;
+        //addN前没有var关键字，所以是一个全局变量
+        addN = function () {
+            //console.log("here");
+            n += 1
+        }
+
+        function f2() {
+            alert(n);
+        }
+
+        return f2;
+    }
+    var result = f1();
+    result(); // 999
+    addN();//必须执行f1()后才能执行addN,否则报错addN is not defined
+    result(); // 1000
+
+
+</script>
+</body>
+</html>
