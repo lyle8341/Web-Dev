@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        td{
+           text-align: center;
+        }
+    </style>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    $(function () {
+
+  $('#table').on("click",".delete", function (ev) {
+      ev.preventDefault();
+      //console.log(ev.type);
+      $('#' + ev.target.id).parent().parent().remove();
+      alert("id为" + ev.target.id + "的元素被删除了！");
+  });
+
+    });
+</script>
+
+<button id="btn" class="good">查看</button>
+
+<br><br><br>
+
+<table id="table" width="500px" border="1px" cellspacing="0">
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td>张三</td>
+        <td>20</td>
+        <td>
+            <a id="3" class="delete" href="">删除</a>
+            <a class="detail" href="">查看</a>
+        </td>
+    </tr>
+    <tr>
+        <td>李四</td>
+        <td>50</td>
+        <td>
+            <a id="4" class="delete" href="">删除</a>
+            <a class="detail" href="">查看</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
