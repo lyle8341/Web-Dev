@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        article, aside, dialog, footer, header, section, footer, nav, figure, menu {
+            display: block;
+        }
+    </style>
+
+    <!--在IE8中，<article>被解释成命名为<article />和</article />两个空的标签元素，
+    与文章内容并列为兄弟节点
+    -->
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+　　<h1>文章标题</h1>
+<article style="color: #06F;">
+    　　这是文章内容，应该是一段蓝色的文字。在老式浏览器中，如果不做hack将显示异常。
+</article>
+</body>
+</html>
