@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+
+
+<script>
+
+    /*ready会执行两次*/
+   /* $(function () {
+        alert("haha");
+    });
+    $(function () {
+        alert("houhou");
+    });*/
+
+
+    /*onload只会执行一次*/
+    /*window.onload = function () {
+        alert("onload1");
+    }
+    window.onload = function () {
+        alert("onload2");
+    }*/
+
+    $(window).load(function () {
+        alert("jquery-onload1");
+    });
+    $(window).load(function () {
+        alert("jquery-onload2");
+    });
+
+</script>
+
+</body>
+</html>
